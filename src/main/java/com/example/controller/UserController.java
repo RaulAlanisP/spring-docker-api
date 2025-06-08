@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.entity.User;
-import com.example.service.UserService;
+import com.example.service.UserServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 public class UserController {
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @GetMapping("/findAll")
     public ResponseEntity<List<User>> getAllUsers() {
